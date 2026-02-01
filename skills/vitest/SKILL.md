@@ -16,14 +16,14 @@ Name tests by what the user or system observes, not by internal method names.
 
 ```typescript
 // Good: describes observable behavior
-it('displays error message when form submitted with empty email', async () => {
+test('displays error message when form submitted with empty email', async () => {
   render(<LoginForm />)
   await userEvent.click(screen.getByRole('button', { name: 'Sign in' }))
   expect(screen.getByText('Email is required')).toBeVisible()
 })
 
 // Bad: tests implementation details
-it('calls setError when validateEmail returns false', () => { ... })
+test('calls setError when validateEmail returns false', () => { ... })
 ```
 
 - **Arrange → Act → Assert (AAA)** structure in every test
@@ -40,7 +40,7 @@ Real code > Fake implementations > Spies > vi.mock
 - Use MSW for HTTP API mocking (intercepts at the network level, not the module level)
 - Use `vi.fn()` for callbacks passed as props
 - Use `vi.spyOn()` when verifying a specific call without replacing behavior
-- **Avoid `vi.mock()` for module mocking** — it couples tests to import paths and internal module structure. Exceptions: browser APIs, timers, or third-party modules with side effects.
+- **Avoid `vi.mock()` for module mocking** — test couples tests to import paths and internal module structure. Exceptions: browser APIs, timers, or third-party modules with side effects.
 
 ### MSW for API Mocking
 
@@ -61,14 +61,14 @@ beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
-it('renders user list from API', async () => {
+test('renders user list from API', async () => {
   render(<UserList />)
   expect(await screen.findByText('Alice')).toBeVisible()
   expect(screen.getByText('Bob')).toBeVisible()
 })
 
 // Override for error case
-it('shows error when API fails', async () => {
+test('shows error when API fails', async () => {
   server.use(
     http.get('/api/users', () => {
       return new HttpResponse(null, { status: 500 })
@@ -93,7 +93,7 @@ For React component tests, use `@testing-library/react`:
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-it('toggles dropdown on click', async () => {
+test('toggles dropdown on click', async () => {
   render(<Dropdown options={['A', 'B', 'C']} />)
 
   await userEvent.click(screen.getByRole('button', { name: 'Select' }))
@@ -126,14 +126,14 @@ src/
 
 ```typescript
 // Global test setup (vitest.setup.ts)
-import '@testing-library/jest-dom/vitest'
+import "@testing-library/jest-dom/vitest";
 
 // Per-test cleanup is automatic with Testing Library
 // Use beforeEach only for shared state setup
 
 beforeEach(() => {
-  vi.clearAllMocks()
-})
+  vi.clearAllMocks();
+});
 ```
 
 - **Do not share state between tests** — each test must set up its own context
@@ -146,7 +146,7 @@ function createUser(overrides?: Partial<User>): User {
   return { id: '1', name: 'Alice', email: 'alice@test.com', ...overrides }
 }
 
-it('displays user name', () => {
+test('displays user name', () => {
   render(<UserCard user={createUser({ name: 'Bob' })} />)
   expect(screen.getByText('Bob')).toBeVisible()
 })
@@ -160,12 +160,12 @@ it('displays user name', () => {
 
 ```typescript
 // Good: findBy waits automatically
-expect(await screen.findByText('Loaded')).toBeVisible()
+expect(await screen.findByText("Loaded")).toBeVisible();
 
 // Good: waitFor for non-query assertions
 await waitFor(() => {
-  expect(onSubmit).toHaveBeenCalledWith({ name: 'Alice' })
-})
+  expect(onSubmit).toHaveBeenCalledWith({ name: "Alice" });
+});
 ```
 
 ## Rule 7: Snapshot Testing — Sparingly
@@ -175,12 +175,12 @@ await waitFor(() => {
 
 ```typescript
 // Acceptable: data transformation
-it('formats API response', () => {
+test("formats API response", () => {
   expect(formatUser(rawData)).toMatchInlineSnapshot(`
     {
       "fullName": "Alice Smith",
       "initials": "AS",
     }
-  `)
-})
+  `);
+});
 ```
