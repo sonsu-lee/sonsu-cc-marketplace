@@ -85,6 +85,9 @@ claude mcp add react-aria npx @react-aria/mcp@latest
 
 # Next.js DevTools
 claude mcp add next-devtools -- npx -y next-devtools-mcp@latest
+
+# Storybook (requires running Storybook dev server, per-project scope)
+claude mcp add storybook-mcp --transport http http://localhost:6006/mcp --scope project
 ```
 
-> **Note:** Storybook MCP runs inside the Storybook dev server (`localhost:6006/mcp`). Install `@storybook/addon-mcp` in projects that use Storybook — see [addon docs](https://storybook.js.org/addons/@storybook/addon-mcp).
+> **Note:** Storybook MCP requires `@storybook/addon-mcp` installed in your project and a running Storybook dev server. See [addon docs](https://storybook.js.org/addons/@storybook/addon-mcp).
