@@ -24,6 +24,9 @@ npx skills add vercel-labs/agent-skills --skill react-best-practices
 
 # Karpathy-style coding guidelines (reduce common LLM mistakes)
 npx skills add forrestchang/andrej-karpathy-skills
+
+# Playwright CLI + SKILL — official Microsoft, token-efficient E2E testing
+npx skills add microsoft/playwright-cli
 ```
 
 ## Structure
