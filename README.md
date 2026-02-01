@@ -84,7 +84,7 @@ Reference configurations in `mcp/`. Copy into your project's `.mcp.json` or use 
 claude mcp add react-aria npx @react-aria/mcp@latest
 
 # Next.js DevTools
-claude mcp add next-devtools npx -y next-devtools-mcp@latest
+claude mcp add next-devtools -- npx -y next-devtools-mcp@latest
 ```
 
 > **Note:** Storybook MCP runs inside the Storybook dev server (`localhost:6006/mcp`). Install `@storybook/addon-mcp` in projects that use Storybook — see [addon docs](https://storybook.js.org/addons/@storybook/addon-mcp).
