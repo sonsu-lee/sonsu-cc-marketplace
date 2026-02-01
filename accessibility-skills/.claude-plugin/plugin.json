@@ -1,0 +1,10 @@
+{
+  "name": "accessibility-skills",
+  "description": "Web accessibility skills including semantic HTML, keyboard patterns, ARIA, and React Aria",
+  "version": "1.0.0",
+  "author": {
+    "name": "sonsu"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "frontend-skills",
+  "description": "Frontend development skills including React, Next.js, and TypeScript conventions",
+  "version": "1.0.0",
+  "author": {
+    "name": "sonsu"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

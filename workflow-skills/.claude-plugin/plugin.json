@@ -1,0 +1,10 @@
+{
+  "name": "workflow-skills",
+  "description": "Workflow skills including technical writing and translation refinement",
+  "version": "1.0.0",
+  "author": {
+    "name": "sonsu"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

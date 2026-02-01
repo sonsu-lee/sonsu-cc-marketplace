@@ -1,0 +1,10 @@
+{
+  "name": "data-fetching-skills",
+  "description": "Data fetching and API integration skills including TanStack Query and openapi-typescript",
+  "version": "1.0.0",
+  "author": {
+    "name": "sonsu"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

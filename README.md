@@ -1,17 +1,18 @@
 # sonsu-cc-marketplace
 
-Personal collection of Claude Code plugins — skills, commands, and MCP servers.
+Personal collection of Claude Code plugins — frontend pattern enforcement, testing, accessibility, data fetching, and workflow skills.
 
 ## Install
 
 ```bash
-npx skills add sonsu-lee/sonsu-cc-marketplace
+claude plugins install sonsu-lee/sonsu-cc-marketplace
 ```
 
-Install a specific skill:
+Install a specific plugin:
 
 ```bash
-npx skills add sonsu-lee/sonsu-cc-marketplace --skill react
+claude plugins install sonsu-lee/sonsu-cc-marketplace/frontend-skills
+claude plugins install sonsu-lee/sonsu-cc-marketplace/testing-skills
 ```
 
 ### External Skills
@@ -35,32 +36,36 @@ claude plugins install OthmanAdi/planning-with-files
 ## Structure
 
 ```
-skills/       # Agent skills (pattern enforcement, workflows)
-commands/     # Slash commands
-mcp/          # MCP server configurations
+sonsu-cc-marketplace/
+├── .claude-plugin/
+│   └── marketplace.json          # Marketplace manifest
+├── frontend-skills/              # Plugin
+│   ├── .claude-plugin/plugin.json
+│   └── skills/ (react, nextjs, typescript)
+├── data-fetching-skills/         # Plugin
+│   ├── .claude-plugin/plugin.json
+│   └── skills/ (tanstack-query, openapi-typescript)
+├── testing-skills/               # Plugin
+│   ├── .claude-plugin/plugin.json
+│   └── skills/ (vitest, storybook)
+├── accessibility-skills/         # Plugin
+│   ├── .claude-plugin/plugin.json
+│   └── skills/ (accessibility)
+├── workflow-skills/              # Plugin
+│   ├── .claude-plugin/plugin.json
+│   └── skills/ (technical-writing, translation-refinement)
+└── mcp/                          # MCP reference configs
 ```
 
-## Skills
+## Plugins
 
-### Pattern Enforcement
-
-| Skill | Description |
-|-------|-------------|
-| **react** | React 18/19 conventions — Server Components, hooks, composition, state management |
-| **typescript** | TypeScript conventions — strict mode, discriminated unions, no enums/namespaces |
-| **nextjs** | Next.js App Router — file structure, Server Actions, caching, middleware |
-| **tanstack-query** | TanStack Query — query key factories, custom hooks, mutation flow |
-| **vitest** | Vitest — behavior-based testing, MSW, Testing Library |
-| **storybook** | Storybook — CSF 3, args-driven stories, interaction tests |
-| **accessibility** | Web accessibility — semantic HTML, keyboard patterns, ARIA, React Aria |
-| **openapi-typescript** | OpenAPI type generation — openapi-typescript, openapi-fetch patterns |
-
-### Workflow
-
-| Skill | Description |
-|-------|-------------|
-| **technical-writing** | Structured workflow for technical articles with source citations |
-| **translation-refinement** | Document translation with recursive naturalness review |
+| Plugin | Skills | Description |
+|--------|--------|-------------|
+| **frontend-skills** | react, nextjs, typescript | React 18/19, Next.js App Router, TypeScript strict conventions |
+| **data-fetching-skills** | tanstack-query, openapi-typescript | TanStack Query patterns, openapi-typescript + openapi-fetch |
+| **testing-skills** | vitest, storybook | Vitest behavior-based testing, Storybook CSF 3 |
+| **accessibility-skills** | accessibility | Semantic HTML, keyboard patterns, ARIA, React Aria |
+| **workflow-skills** | technical-writing, translation-refinement | Technical articles, document translation |
 
 ## MCP Servers
 

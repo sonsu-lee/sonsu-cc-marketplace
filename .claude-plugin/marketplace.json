@@ -1,0 +1,62 @@
+{
+  "name": "sonsu-cc-marketplace",
+  "description": "Personal collection of Claude Code plugins for frontend development — pattern enforcement, testing, accessibility, data fetching, and workflow skills",
+  "owner": {
+    "name": "sonsu"
+  },
+  "metadata": {
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "frontend-skills",
+      "source": "./frontend-skills",
+      "description": "Frontend development skills including React, Next.js, and TypeScript conventions",
+      "version": "1.0.0",
+      "author": {
+        "name": "sonsu"
+      },
+      "keywords": ["react", "nextjs", "typescript"]
+    },
+    {
+      "name": "data-fetching-skills",
+      "source": "./data-fetching-skills",
+      "description": "Data fetching and API integration skills including TanStack Query and openapi-typescript",
+      "version": "1.0.0",
+      "author": {
+        "name": "sonsu"
+      },
+      "keywords": ["tanstack-query", "openapi", "api"]
+    },
+    {
+      "name": "testing-skills",
+      "source": "./testing-skills",
+      "description": "Testing skills including Vitest, Testing Library, MSW, and Storybook conventions",
+      "version": "1.0.0",
+      "author": {
+        "name": "sonsu"
+      },
+      "keywords": ["vitest", "storybook", "testing-library", "msw"]
+    },
+    {
+      "name": "accessibility-skills",
+      "source": "./accessibility-skills",
+      "description": "Web accessibility skills including semantic HTML, keyboard patterns, ARIA, and React Aria",
+      "version": "1.0.0",
+      "author": {
+        "name": "sonsu"
+      },
+      "keywords": ["a11y", "accessibility", "aria", "wcag"]
+    },
+    {
+      "name": "workflow-skills",
+      "source": "./workflow-skills",
+      "description": "Workflow skills including technical writing and translation refinement",
+      "version": "1.0.0",
+      "author": {
+        "name": "sonsu"
+      },
+      "keywords": ["writing", "translation", "workflow"]
+    }
+  ]
+}

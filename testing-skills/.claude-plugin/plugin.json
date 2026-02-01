@@ -1,0 +1,10 @@
+{
+  "name": "testing-skills",
+  "description": "Testing skills including Vitest, Testing Library, MSW, and Storybook conventions",
+  "version": "1.0.0",
+  "author": {
+    "name": "sonsu"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}
