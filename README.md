@@ -27,6 +27,9 @@ npx skills add forrestchang/andrej-karpathy-skills
 
 # Playwright CLI + SKILL — official Microsoft, token-efficient E2E testing
 npx skills add microsoft/playwright-cli
+
+# Manus-style persistent markdown planning (context recovery across sessions)
+claude plugins install OthmanAdi/planning-with-files
 ```
 
 ## Structure
