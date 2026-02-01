@@ -2,6 +2,30 @@
 
 Personal collection of Claude Code plugins — skills, commands, and MCP servers.
 
+## Install
+
+```bash
+npx skills add sonsu-lee/sonsu-cc-marketplace
+```
+
+Install a specific skill:
+
+```bash
+npx skills add sonsu-lee/sonsu-cc-marketplace --skill react
+```
+
+### External Skills
+
+Additional recommended skills from other repositories:
+
+```bash
+# Vercel React & Next.js performance rules (57 rules across 8 categories)
+npx skills add vercel-labs/agent-skills --skill react-best-practices
+
+# Karpathy-style coding guidelines (reduce common LLM mistakes)
+npx skills add forrestchang/andrej-karpathy-skills
+```
+
 ## Structure
 
 ```
