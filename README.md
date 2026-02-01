@@ -55,3 +55,22 @@ mcp/          # MCP server configurations
 |-------|-------------|
 | **technical-writing** | Structured workflow for technical articles with source citations |
 | **translation-refinement** | Document translation with recursive naturalness review |
+
+## MCP Servers
+
+Reference configurations in `mcp/`. Copy into your project's `.mcp.json` or use `claude mcp add`.
+
+| Server | Package | Description |
+|--------|---------|-------------|
+| **react-aria** | `@react-aria/mcp` | React Aria component docs and patterns |
+| **next-devtools** | `next-devtools-mcp` | Next.js dev server errors, logs, metadata (requires Next.js 16+) |
+
+### Quick Setup
+
+```bash
+# React Aria
+claude mcp add react-aria npx @react-aria/mcp@latest
+
+# Next.js DevTools
+claude mcp add next-devtools npx -y next-devtools-mcp@latest
+```
